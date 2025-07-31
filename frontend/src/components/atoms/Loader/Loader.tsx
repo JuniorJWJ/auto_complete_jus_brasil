@@ -12,7 +12,7 @@ const LoaderContainer = styled.div`
   height: 20px;
   border: 3px solid rgba(0,0,0,0.1);
   border-radius: 50%;
-  border-top: 3px solid #4CAF50;
+  border-top: 3px solid #333; 
   animation: ${spin} 1s linear infinite;
   margin-left: 10px;
 `;

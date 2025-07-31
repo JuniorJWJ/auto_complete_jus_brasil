@@ -6,7 +6,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InputContainer = styled.input<{ hasSuggestions?: boolean }>`
-  width: 100%;
+  width: 500px;
   padding: 12px 16px;
   font-size: 16px;
   border: 2px solid #ddd;
@@ -18,11 +18,12 @@ const InputContainer = styled.input<{ hasSuggestions?: boolean }>`
   transition: border-color 0.3s;
 
   &:focus {
-    border-color: #4CAF50;
+    border-color: #333;
     outline: none;
   }
 
   @media (max-width: 768px) {
+    width: 350px;
     padding: 10px 14px;
     font-size: 14px;
   }

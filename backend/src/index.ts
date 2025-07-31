@@ -3,7 +3,6 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { resolvers } from './resolvers';
 
 
-// Defina o schema diretamente 
 const typeDefs = `#graphql
   type Suggestion {
     id: ID!

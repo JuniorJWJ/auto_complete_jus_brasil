@@ -4,6 +4,7 @@ import Input from '../../atoms/input/Input';
 import SuggestionItem from '../../molecules/SuggestionItem/SuggestionItem';
 import Loader from '../../atoms/Loader/Loader';
 import { useAutocomplete } from './useAutocomplete';
+import ClearButton from '../../atoms/ClearButton/ClearButton';
 
 const AutocompleteContainer = styled.div`
   position: relative;
@@ -39,6 +40,7 @@ const ErrorMessage = styled.div`
 const Autocomplete = () => {
   const {
     searchTerm,
+    setSearchTerm,
     suggestions,
     loading,
     error,
@@ -51,10 +53,11 @@ const Autocomplete = () => {
       <Input
         value={searchTerm}
         onChange={handleInputChange}
-        placeholder="Digite sua busca..."
+        placeholder="Digite pelo menos 4 caracteres para buscar..."
         hasSuggestions={suggestions.length > 0}
         aria-label="Campo de busca"
       />
+      <ClearButton onClick={() => setSearchTerm('')} aria-label="Limpar busca" />
 
       {loading && <Loader />}
       {error && <ErrorMessage>Erro: {error}</ErrorMessage>}

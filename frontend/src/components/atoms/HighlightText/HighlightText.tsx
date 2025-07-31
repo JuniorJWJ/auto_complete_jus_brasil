@@ -9,7 +9,7 @@ interface HighlightTextProps {
 const HighlightTextContainer = styled.span`
   strong {
     font-weight: bold;
-    color: #4CAF50;
+    color: #555;
   }
 `;
 

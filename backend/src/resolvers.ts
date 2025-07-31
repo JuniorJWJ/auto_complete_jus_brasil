@@ -1,3 +1,5 @@
+import { Trie } from './utils/trie';
+
 const suggestionsData =  [
   "JavaScript frameworks",
   "Java programming",
@@ -131,19 +133,22 @@ const suggestionsData =  [
   "Web components"
 ];
   
-  export const resolvers = {
-    Query: {
-      suggestions: (_: any, { term }: { term: string }) => {
-        if (term.length < 4) return [];
-        
-        const filtered = suggestionsData.filter(item => 
-          item.toLowerCase().includes(term.toLowerCase())
-        );
-        
-        return filtered.slice(0, 20).map((text, index) => ({
-          id: index.toString(),
-          term: text
-        }));
-      }
+const trie = new Trie();
+for (const word of suggestionsData) {
+  trie.insert(word);
+}
+
+export const resolvers = {
+  Query: {
+    suggestions: (_: any, { term }: { term: string }) => {
+      if (term.length < 4) return [];
+
+      const matches = trie.findPrefix(term, 20);
+
+      return matches.map((text, index) => ({
+        id: index.toString(),
+        term: text
+      }));
     }
-  };
+  }
+};

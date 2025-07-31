@@ -46,6 +46,7 @@ export const useAutocomplete = () => {
 
   return {
     searchTerm,
+    setSearchTerm,
     suggestions,
     loading,
     error: error?.message,

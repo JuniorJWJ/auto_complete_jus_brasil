@@ -44,9 +44,14 @@ Para exibir apenas 10 sugestões na lista, ajustei o `height` dos itens "no olho
 
 No segundo commit, o sistema já está funcional. Ainda planejo incluir alguns ajustes, como:
 
-*   Um botão para limpar o campo de input.
+*   Um botão para limpar o campo de input. ✅
+*   Otimização na busca dos dados. ✅
 *   Escrita e execução de testes automatizados.
 
-## 10. Formatação do texto 
+## 10. Otimização do Back End
+
+Para melhorar a performance das buscas no GraphQL, otimizamos nosso back-end substituindo o filtro linear por uma estrutura de dados mais eficiente, a Trie. Essa mudança reduziu significativamente o tempo de busca por sugestões, especialmente com grandes volumes de dados. A nova função retorna os 20 primeiros resultados para um prefixo, garantindo uma resposta rápida e consistente. 
+
+## 11. Formatação do texto 
 
 Escrevi um texto explicativo e solicitei ao ChatGPT que o revisasse para melhorar a escrita e adequá-lo ao padrão de formatação Markdown (`.md`). O objetivo foi torná-lo mais claro, organizado e com uma linguagem mais fluida e profissional.
