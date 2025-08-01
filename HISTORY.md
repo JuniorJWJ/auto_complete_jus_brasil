@@ -55,3 +55,11 @@ Para melhorar a performance das buscas no GraphQL, otimizamos nosso back-end sub
 ## 11. Formatação do texto 
 
 Escrevi um texto explicativo e solicitei ao ChatGPT que o revisasse para melhorar a escrita e adequá-lo ao padrão de formatação Markdown (`.md`). O objetivo foi torná-lo mais claro, organizado e com uma linguagem mais fluida e profissional.
+
+## 12. Prints do sistema
+
+<div style="display: flex; justify-content: space-between; align-items: center; text-align: center;">
+  <img src="./images/desktop.png" alt="Desktop" width="30%" />
+  <img src="./images/mobile.png" alt="Mobile" width="30%" />
+  <img src="./images/apollo.png" alt="Apollo" width="30%" />
+</div>
